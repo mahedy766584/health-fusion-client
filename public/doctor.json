@@ -1,0 +1,245 @@
+[
+    {
+        "name": "Dr. Sarah Johnson",
+        "category": "Cardiologist",
+        "occupation": "Senior Consultant",
+        "review": "4.8/5",
+        "location": "New York, NY",
+        "about": "Dr. Sarah Johnson has over 20 years of experience in cardiology and specializes in heart disease prevention and management.",
+        "education": [
+            {"degree": "MD", "institution": "Harvard Medical School", "year": 1997, "category": "Medicine"},
+            {"degree": "Fellowship", "institution": "Johns Hopkins University", "year": 2002, "category": "Cardiology"}
+        ],
+        "work_and_experience": [
+            {"role": "New York General Hospital", "years": "2002-2010"},
+            {"role": "Chief Cardiologist at HeartCare Clinic", "years": "2010-2015"},
+            {"role": "Assistant Professor at NYU School of Medicine", "years": "2015-2018"},
+            {"role": "Resident at Mount Sinai Hospital", "years": "1998-2002"},
+            {"role": "Intern at Bellevue Hospital Center", "years": "1997-1998"}
+        ],
+        "services": ["Heart disease diagnosis", "ECG", "Stress test", "Cardiac rehabilitation"],
+        "specializes": ["Heart disease prevention", "Hypertension", "Arrhythmia"],
+        "awards": [
+            {"month": "December", "year": 2018, "subject": "Top Cardiologist Award", "description": "Recognized for outstanding contributions to the field of cardiology."},
+            {"month": "October", "year": 2020, "subject": "Excellence in Patient Care", "description": "Awarded for exceptional patient care and outcomes."},
+            {"month": "May", "year": 2022, "subject": "Heart Disease Prevention Award", "description": "Acknowledged for pioneering research in heart disease prevention."}
+        ],
+        "profile_image": "https://images.pexels.com/photos/5998465/pexels-photo-5998465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Dr. Michael Lee",
+        "category": "Dermatologist",
+        "occupation": "Consultant Dermatologist",
+        "review": "4.7/5",
+        "location": "Los Angeles, CA",
+        "about": "Dr. Michael Lee is a renowned dermatologist with a focus on skin cancer treatment and cosmetic dermatology.",
+        "education": [
+            {"degree": "MD", "institution": "Stanford University School of Medicine", "year": 2004, "category": "Medicine"},
+            {"degree": "Residency", "institution": "UCLA", "year": 2008, "category": "Dermatology"}
+        ],
+        "work_and_experience": [
+            {"role": "Dermatology Clinic LA", "years": "2015-present"},
+            {"role": "UCLA Medical Center", "years": "2010-2015"},
+            {"role": "Clinical Instructor at UCLA School of Medicine", "years": "2008-2010"},
+            {"role": "Resident at Cedars-Sinai Medical Center", "years": "2005-2008"},
+            {"role": "Intern at Kaiser Permanente", "years": "2004-2005"}
+        ],
+        "services": ["Skin cancer screening", "Cosmetic treatments", "Acne treatment", "Mole removal"],
+        "specializes": ["Skin cancer", "Cosmetic dermatology", "Acne"],
+        "awards": [
+            {"month": "January", "year": 2019, "subject": "Best Dermatologist", "description": "Recognized as the top dermatologist in the region."},
+            {"month": "April", "year": 2021, "subject": "Dermatology Excellence Award", "description": "Awarded for exceptional skills and contributions to dermatology."},
+            {"month": "July", "year": 2023, "subject": "Innovator in Dermatology", "description": "Honored for innovative approaches in skin cancer treatment."}
+        ],
+        "profile_image": "https://images.pexels.com/photos/6129452/pexels-photo-6129452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Dr. Emily Davis",
+        "category": "Pediatrician",
+        "occupation": "Senior Pediatrician",
+        "review": "4.9/5",
+        "location": "Chicago, IL",
+        "about": "Dr. Emily Davis has been providing exceptional pediatric care for over 15 years, focusing on child development and health.",
+        "education": [
+            {"degree": "MD", "institution": "University of Chicago Pritzker School of Medicine", "year": 2001, "category": "Medicine"},
+            {"degree": "Residency", "institution": "Ann & Robert H. Lurie Children's Hospital", "year": 2005, "category": "Pediatrics"}
+        ],
+        "work_and_experience": [
+            {"role": "Children's Hospital of Chicago", "years": "2010-present"},
+            {"role": "Private practice", "years": "2008-2010"},
+            {"role": "Clinical Instructor at University of Chicago", "years": "2005-2008"},
+            {"role": "Resident at Ann & Robert H. Lurie Children's Hospital", "years": "2002-2005"},
+            {"role": "Intern at Rush University Medical Center", "years": "2001-2002"}
+        ],
+        "services": ["Child health check-ups", "Vaccinations", "Developmental screenings"],
+        "specializes": ["Child development", "Vaccinations", "Nutrition"],
+        "awards": [
+            {"month": "February", "year": 2020, "subject": "Pediatric Care Award", "description": "Recognized for outstanding care and support for children."},
+            {"month": "September", "year": 2021, "subject": "Top Pediatrician", "description": "Awarded for excellence in pediatric practice."},
+            {"month": "November", "year": 2022, "subject": "Child Health Champion", "description": "Honored for significant contributions to child health."}
+        ],
+        "profile_image": "https://images.pexels.com/photos/4227090/pexels-photo-4227090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Dr. James Wilson",
+        "category": "Orthopedic Surgeon",
+        "occupation": "Consultant Orthopedic Surgeon",
+        "review": "4.6/5",
+        "location": "Houston, TX",
+        "about": "Dr. James Wilson specializes in orthopedic surgeries with a focus on joint replacement and sports injuries.",
+        "education": [
+            {"degree": "MD", "institution": "Baylor College of Medicine", "year": 2004, "category": "Medicine"},
+            {"degree": "Residency", "institution": "Texas Orthopedic Hospital", "year": 2008, "category": "Orthopedic Surgery"}
+        ],
+        "work_and_experience": [
+            {"role": "Houston Orthopedic Center", "years": "2015-present"},
+            {"role": "Memorial Hermann Hospital", "years": "2010-2015"},
+            {"role": "Assistant Professor at Baylor College of Medicine", "years": "2008-2010"},
+            {"role": "Resident at Texas Orthopedic Hospital", "years": "2005-2008"},
+            {"role": "Intern at Houston Methodist Hospital", "years": "2004-2005"}
+        ],
+        "services": ["Joint replacement", "Arthroscopy", "Sports injury treatment"],
+        "specializes": ["Joint replacement", "Sports injuries", "Arthroscopy"],
+        "awards": [
+            {"month": "March", "year": 2017, "subject": "Orthopedic Surgery Award", "description": "Recognized for excellence in orthopedic surgery."},
+            {"month": "June", "year": 2019, "subject": "Excellence in Orthopedics", "description": "Awarded for significant contributions to orthopedic medicine."},
+            {"month": "October", "year": 2021, "subject": "Sports Injury Specialist", "description": "Honored for outstanding work in sports injury treatment."}
+        ],
+        "profile_image": "https://images.pexels.com/photos/6303775/pexels-photo-6303775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Dr. Olivia Brown",
+        "category": "Neurologist",
+        "occupation": "Consultant Neurologist",
+        "review": "4.7/5",
+        "location": "Phoenix, AZ",
+        "about": "Dr. Olivia Brown is a neurologist with expertise in treating neurological disorders including epilepsy and stroke.",
+        "education": [
+            {"degree": "MD", "institution": "University of Pennsylvania Perelman School of Medicine", "year": 2004, "category": "Medicine"},
+            {"degree": "Residency", "institution": "Barrow Neurological Institute", "year": 2008, "category": "Neurology"}
+        ],
+        "work_and_experience": [
+            {"role": "Mayo Clinic Phoenix", "years": "2015-present"},
+            {"role": "Arizona Neurology Institute", "years": "2010-2015"},
+            {"role": "Assistant Professor at University of Arizona", "years": "2008-2010"},
+            {"role": "Resident at Barrow Neurological Institute", "years": "2005-2008"},
+            {"role": "Intern at Banner Health", "years": "2004-2005"}
+        ],
+        "services": ["Epilepsy treatment", "Stroke rehabilitation", "Neuroimaging"],
+        "specializes": ["Epilepsy", "Stroke", "Neuromuscular disorders"],
+        "awards": [
+            {"month": "April", "year": 2018, "subject": "Neurology Excellence Award", "description": "Awarded for exceptional contributions to neurology."},
+            {"month": "August", "year": 2019, "subject": "Innovator in Neurology", "description": "Recognized for innovative treatments in neurological disorders."},
+            {"month": "January", "year": 2022, "subject": "Best Neurologist", "description": "Honored for excellence in neurological care."}
+        ],
+        "profile_image": "https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Dr. John Smith",
+        "category": "Oncologist",
+        "occupation": "Consultant Oncologist",
+        "review": "4.8/5",
+        "location": "San Francisco, CA",
+        "about": "Dr. John Smith specializes in oncology with a focus on cancer treatment and research.",
+        "education": [
+            {"degree": "MD", "institution": "University of California, San Francisco", "year": 2003, "category": "Medicine"},
+            {"degree": "Fellowship", "institution": "Memorial Sloan Kettering Cancer Center", "year": 2008, "category": "Oncology"}
+        ],
+        "work_and_experience": [
+            {"role": "UCSF Medical Center", "years": "2010-present"},
+            {"role": "Stanford Health Care", "years": "2008-2010"},
+            {"role": "Clinical Researcher at Memorial Sloan Kettering", "years": "2005-2008"},
+            {"role": "Resident at UC San Francisco", "years": "2003-2005"},
+            {"role": "Intern at Kaiser Permanente", "years": "2002-2003"}
+        ],
+        "services": ["Cancer diagnosis", "Chemotherapy", "Radiation therapy"],
+        "specializes": ["Breast cancer", "Lung cancer", "Clinical trials"],
+        "awards": [
+            {"month": "March", "year": 2018, "subject": "Oncology Research Award", "description": "Recognized for significant contributions to cancer research."},
+            {"month": "July", "year": 2019, "subject": "Best Oncologist", "description": "Awarded for excellence in oncology care."},
+            {"month": "October", "year": 2021, "subject": "Innovator in Cancer Treatment", "description": "Honored for innovative approaches in cancer treatment."}
+        ],
+        "profile_image": "https://images.pexels.com/photos/6762862/pexels-photo-6762862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Dr. Laura Martinez",
+        "category": "Gynecologist",
+        "occupation": "Consultant Gynecologist",
+        "review": "4.7/5",
+        "location": "Miami, FL",
+        "about": "Dr. Laura Martinez specializes in women's health with a focus on gynecological surgeries and reproductive health.",
+        "education": [
+            {"degree": "MD", "institution": "University of Miami Leonard M. Miller School of Medicine", "year": 2002, "category": "Medicine"},
+            {"degree": "Residency", "institution": "Jackson Memorial Hospital", "year": 2006, "category": "Obstetrics and Gynecology"}
+        ],
+        "work_and_experience": [
+            {"role": "Miami Women's Health Center", "years": "2010-present"},
+            {"role": "Jackson Memorial Hospital", "years": "2006-2010"},
+            {"role": "Assistant Professor at University of Miami", "years": "2008-2010"},
+            {"role": "Resident at Jackson Memorial Hospital", "years": "2002-2006"},
+            {"role": "Intern at Miami-Dade Health System", "years": "2001-2002"}
+        ],
+        "services": ["Gynecological exams", "Reproductive health", "Minimally invasive surgery"],
+        "specializes": ["Gynecological surgery", "Reproductive health", "Menopause management"],
+        "awards": [
+            {"month": "May", "year": 2018, "subject": "Excellence in Gynecology", "description": "Recognized for outstanding work in gynecology."},
+            {"month": "November", "year": 2019, "subject": "Best Women's Health Specialist", "description": "Awarded for excellence in women's health."},
+            {"month": "February", "year": 2021, "subject": "Innovator in Gynecological Care", "description": "Honored for innovative approaches in gynecological care."}
+        ],
+        "profile_image": "https://images.pexels.com/photos/14438790/pexels-photo-14438790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Dr. Daniel Green",
+        "category": "Endocrinologist",
+        "occupation": "Consultant Endocrinologist",
+        "review": "4.9/5",
+        "location": "Philadelphia, PA",
+        "about": "Dr. Daniel Green specializes in endocrine disorders, including diabetes and thyroid diseases.",
+        "education": [
+            {"degree": "MD", "institution": "Perelman School of Medicine", "year": 2005, "category": "Medicine"},
+            {"degree": "Fellowship", "institution": "Mayo Clinic", "year": 2010, "category": "Endocrinology"}
+        ],
+        "work_and_experience": [
+            {"role": "Philadelphia Endocrine Institute", "years": "2015-present"},
+            {"role": "Temple University Hospital", "years": "2010-2015"},
+            {"role": "Clinical Researcher at Mayo Clinic", "years": "2008-2010"},
+            {"role": "Resident at Perelman School of Medicine", "years": "2005-2008"},
+            {"role": "Intern at Thomas Jefferson University Hospitals", "years": "2004-2005"}
+        ],
+        "services": ["Diabetes management", "Thyroid treatment", "Hormone therapy"],
+        "specializes": ["Diabetes", "Thyroid disorders", "Hormone imbalances"],
+        "awards": [
+            {"month": "August", "year": 2018, "subject": "Diabetes Management Award", "description": "Recognized for excellence in diabetes management."},
+            {"month": "December", "year": 2019, "subject": "Top Endocrinologist", "description": "Awarded for excellence in endocrine care."},
+            {"month": "March", "year": 2021, "subject": "Innovator in Endocrinology", "description": "Honored for innovative approaches in treating endocrine disorders."}
+        ],
+        "profile_image": "https://images.pexels.com/photos/7659872/pexels-photo-7659872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "name": "Dr. Sophia Adams",
+        "category": "Rheumatologist",
+        "occupation": "Consultant Rheumatologist",
+        "review": "4.8/5",
+        "location": "San Diego, CA",
+        "about": "Dr. Sophia Adams is an expert in rheumatology with a focus on autoimmune diseases and arthritis.",
+        "education": [
+            {"degree": "MD", "institution": "University of California, San Diego", "year": 2003, "category": "Medicine"},
+            {"degree": "Fellowship", "institution": "Cleveland Clinic", "year": 2008, "category": "Rheumatology"}
+        ],
+        "work_and_experience": [
+            {"role": "San Diego Rheumatology Clinic", "years": "2015-present"},
+            {"role": "Cleveland Clinic", "years": "2008-2015"},
+            {"role": "Assistant Professor at UC San Diego", "years": "2008-2010"},
+            {"role": "Resident at UC San Diego", "years": "2005-2008"},
+            {"role": "Intern at Scripps Health", "years": "2004-2005"}
+        ],
+        "services": ["Autoimmune disease treatment", "Arthritis management", "Infusion therapy"],
+        "specializes": ["Autoimmune diseases", "Rheumatoid arthritis", "Lupus"],
+        "awards": [
+            {"month": "June", "year": 2018, "subject": "Rheumatology Excellence Award", "description": "Recognized for outstanding contributions to rheumatology."},
+            {"month": "September", "year": 2019, "subject": "Top Rheumatologist", "description": "Awarded for excellence in rheumatology care."},
+            {"month": "February", "year": 2022, "subject": "Innovator in Autoimmune Disease", "description": "Honored for innovative approaches in treating autoimmune diseases."}
+        ],
+        "profile_image": "https://images.pexels.com/photos/5207104/pexels-photo-5207104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+]

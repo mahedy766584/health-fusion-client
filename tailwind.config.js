@@ -11,5 +11,10 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui'),],
+  variants: {
+    extend: {
+      display: ["focus-group"]
+    }
+  }
 };
