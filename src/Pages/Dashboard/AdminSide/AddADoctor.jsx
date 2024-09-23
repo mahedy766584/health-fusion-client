@@ -5,7 +5,7 @@ import AddDoctorForm from "./AddDoctorForm";
 const AddADoctor = () => {
 
     return (
-        <div className="px-8 py-4 mt-16">
+        <div className="lg:px-8 px-3 py-4">
             <SectionTitle heading={'Add a New Doctor'} />
             {/* adding form */}
             <AddDoctorForm/>

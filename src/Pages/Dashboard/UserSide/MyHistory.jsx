@@ -1,7 +1,7 @@
 
 const MyHistory = () => {
     return (
-        <div className="mt-32">
+        <div className="">
             My History
         </div>
     );

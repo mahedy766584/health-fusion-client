@@ -9,9 +9,9 @@ import { RiFolderHistoryLine } from "react-icons/ri";
 import { MdOutlinePreview } from "react-icons/md";
 import useAdmin from "../../Hooks/useAdmin"
 import { AiOutlineDashboard } from "react-icons/ai";
-import logo from "../../assets/Logo/logo3.png"
 import { CgProfile } from "react-icons/cg";
 import { IoMdLogOut } from "react-icons/io";
+import useAuth from "../../Hooks/useAuth";
 
 
 const Sidebar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
@@ -20,33 +20,23 @@ const Sidebar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
 
     // console.log(sideBarIsOpen);
 
+    const {logOut} = useAuth();
+
     return (
-        <div className={`${sideBarIsOpen ? 'w-64 duration-700' : '-ml-80  duration-700 '} bg-[#003D8D] fixed h-full px-4 py-2 z-30 `}>
-            <div className="my-2 mb-4">
-                {/* logo design */}
-                <div className="flex items-center gap-1 ">
-                    <img src={logo} alt="HealthFusion" className="lg:w-9 w-9" />
-                    <h1
-                        style={{ textShadow: ' 3px 3px 10px black' }}
-                        className={` lg:text-2xl text-xl font-medium font-kanit text-white`}><span className="text-red-400">Health</span >Fusion</h1>
-                </div>
-            </div>
-            <hr />
-            <div className="overflow">
-                <ul className="mt-8 text-white font-medium  overflow-x-auto">
+        <div className={`${sideBarIsOpen ? 'w-64 duration-700' : '-ml-80  duration-700 '} bg-[#003D8D] fixed h-full px-4  z-20`}>
+            <div className="flex items-start flex-col justify-between h-[90vh]  overflow-y-auto">
+                <ul className=" text-white font-medium ">
                     {
                         isAdmin ? <>
                             <NavLink
                                 to={'/dashboard'}
                                 end
                                 className={({ isActive }) =>
-                                    `flex items-center rounded  px-2 py-2 my-5  transition-colors duration-300 transform  hover:bg-[#F87171]   hover:text-white ${isActive ? 'bg-[#F87171] text-white flex ' : 'text-white '
+                                    `flex items-center rounded  px-4 py-2 my-5  transition-colors duration-300 transform  hover:bg-[#F87171]   hover:text-white ${isActive ? 'bg-[#F87171] text-white flex ' : 'text-white '
                                     }`
                                 }
                             >
-                                <span><AiOutlineDashboard className="inline-block w-6 h-6 mr-1 -mt-2" />
-                                    <span className={``}>Dashboard</span>
-                                </span>
+                                <span><AiOutlineDashboard className="inline-block w-6 h-6 mr-1 -mt-2" /> Dashboard</span>
                             </NavLink>
                             <NavLink
                                 to={'/dashboard/allUser'}
@@ -86,7 +76,7 @@ const Sidebar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
                                     }`
                                 }
                             >
-                                <span><FaHome className="inline-block w-6 h-6 mr-1 -mt-2" />Home</span>
+                                <span><FaHome className="inline-block w-6 h-6 mr-1 -mt-2" /> Home</span>
                             </NavLink>
                         </> :
                             <>
@@ -99,16 +89,6 @@ const Sidebar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
                                     }
                                 >
                                     <span><PiBagSimpleBold className="inline-block w-6 h-6 mr-1 -mt-2" /> My Appointment</span>
-                                </NavLink>
-                                <NavLink
-                                    to={'/dashboard/myReviews'}
-                                    end
-                                    className={({ isActive }) =>
-                                        `flex items-center rounded  px-4 py-2 my-5  transition-colors duration-300 transform  hover:bg-[#F87171]   hover:text-white ${isActive ? 'bg-[#F87171] text-white flex ' : 'text-white '
-                                        }`
-                                    }
-                                >
-                                    <span><MdOutlinePreview className="inline-block w-6 h-6 mr-1 -mt-2" /> My Reviews</span>
                                 </NavLink>
                                 <NavLink
                                     to={'/dashboard/myHistory'}
@@ -133,9 +113,9 @@ const Sidebar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
                             </>
                     }
                 </ul>
-                <ul className="absolute bottom-0 overflow-y-auto font-kanit">
+                <ul className="font-kanit">
                     <NavLink
-                        to={'/'}
+                        to={'/dashboard/profilePage'}
                         end
                         className={({ isActive }) =>
                             `flex items-center rounded  px-4 py-2 my-5  transition-colors duration-300 transform  hover:bg-[#F87171]   hover:text-white ${isActive ? 'bg-[#F87171] text-white flex ' : 'text-white '
@@ -144,7 +124,7 @@ const Sidebar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
                     >
                         <span><CgProfile className="inline-block w-6 h-6 mr-1 -mt-2" />Profile</span>
                     </NavLink>
-                    <li className="flex hover:bg-[#F87171] cursor-pointer items-center rounded text-lg  px-4 py-2 my-5 text-white">
+                    <li onClick={logOut} className="flex hover:bg-[#F87171] cursor-pointer items-center rounded text-lg  px-4 py-2 my-5 text-white">
                         <span><IoMdLogOut className="inline-block w-6 h-6 mr-1 -mt-2" /> Logout</span>
                     </li>
                 </ul>

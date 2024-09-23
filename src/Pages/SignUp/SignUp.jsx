@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form"
 import useAuth from "../../Hooks/useAuth";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import toast from "react-hot-toast";
 
@@ -14,9 +13,8 @@ import toast from "react-hot-toast";
 
 const SignUp = () => {
 
-    const { createUser, googleLogin, updateUserProfile } = useAuth();
+    const { createUser, googleLoginUser, updateUserProfile } = useAuth();
     const [showPass, setShowPass] = useState(false)
-    const [captchaValue, setCaptchaValue] = useState(null);
     const navigate = useNavigate();
     const axiosPublic = useAxiosPublic();
 
@@ -31,7 +29,7 @@ const SignUp = () => {
             navigate('/')
             reset();
 
-            const userInfo = {name: data.name, email: data.email, image: data.photoURL};
+            const userInfo = { name: data.name, email: data.email, image: data.photoURL };
             const result = await axiosPublic.post('/users', userInfo)
             console.log('user added to the database---->', result);
 
@@ -40,6 +38,7 @@ const SignUp = () => {
         } finally {
             toast.success('Sign Successful...');
         }
+        console.log(data);
     }
 
 
@@ -48,18 +47,19 @@ const SignUp = () => {
             <Helmet>
                 <title> HealthFusion | Sign Up </title>
             </Helmet>
-            <div className="h-screen lg:flex font-kanit">
+            <div className="h-screen lg:flex font-poppins text-gray-700">
                 {/* banner */}
-                <div className="h-full lg:w-1/2 bg-[#003D8D] flex justify-center items-center">
-                    <img className="max-h-[580px] mx-w-[570px]" src={medicine} />
+                <div className="h-screen lg:w-1/2 bg-[#003D8D] flex justify-center items-center">
+                    <img className="max-h-[400px] mx-w-[570px]" src={medicine} />
                 </div>
                 {/* sing up option */}
-                <div className="h-full lg:w-1/2 bg-white flex justify-center items-center flex-col space-y-6">
-                    <h1 className="text-2xl text-[#0A0808] lg:mt-0 mt-64  font-medium">Sign Up To HealthFusion</h1>
+                <div className="h-screen  flex flex-col justify-center lg:mt-0 mt-20  lg:w-1/2 bg-white px-8 space-y-6">
+                    <h1
+                        className="lg:text-4xl text-2xl text-center font-medium font-kanit text-gray-700">Sign Up to <span className="text-red-400">Health</span >Fusion</h1>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className=" ">
+                        <div className=" space-y-3 font-normal">
                             <div className="lg:flex gap-5">
-                                <label className="form-control w-full max-w-xs">
+                                <label className="form-control w-full">
                                     <div className="label">
                                         <span className="label-text">Name</span>
                                     </div>
@@ -67,10 +67,10 @@ const SignUp = () => {
                                         {...register("name", { required: true })}
                                         type="text"
                                         placeholder="Enter Your Name"
-                                        className="input input-bordered w-96 max-w-xs bg-slate-100" />
+                                        className=" outline-none border-[#fa966b] border rounded px-4 font-medium py-3  bg-slate-100 w-full" />
                                     {errors.name && <span className="text-red-600">Name is required</span>}
                                 </label>
-                                <label className="form-control w-full max-w-xs">
+                                <label className="form-control w-full">
                                     <div className="label">
                                         <span className="label-text">PhotoURL</span>
                                     </div>
@@ -78,12 +78,12 @@ const SignUp = () => {
                                         {...register("photoURL", { required: true })}
                                         type="text"
                                         placeholder="Enter Your Photo URL"
-                                        className="input input-bordered w-96 max-w-xs bg-slate-100" />
+                                        className="outline-none border-[#fa966b] border rounded px-4 font-medium py-3  bg-slate-100 w-full" />
                                     {errors.photoURL && <span className="text-red-600">User Name is required</span>}
                                 </label>
                             </div>
                             <div className="lg:flex gap-5">
-                                <label className="form-control w-full max-w-xs">
+                                <label className="form-control w-full">
                                     <div className="label">
                                         <span className="label-text">Email</span>
                                     </div>
@@ -91,10 +91,10 @@ const SignUp = () => {
                                         {...register("email", { required: true })}
                                         type="text"
                                         placeholder="Enter Your Email"
-                                        className="input input-bordered w-96 max-w-xs bg-slate-100" />
+                                        className=" outline-none border-[#fa966b] border rounded px-4 font-medium py-3  bg-slate-100 w-full" />
                                     {errors.email && <span className="text-red-600">Email is required</span>}
                                 </label>
-                                <label className="form-control w-full max-w-xs relative">
+                                <label className="form-control w-full relative">
                                     <div className="label">
                                         <span className="label-text">Password</span>
                                     </div>
@@ -108,7 +108,7 @@ const SignUp = () => {
                                             })}
                                             type={`${showPass ? "text" : "password"}`}
                                             placeholder="Enter Your Password"
-                                            className="input input-bordered  w-96 max-w-xs bg-slate-100" />
+                                            className=" outline-none border-[#fa966b] border rounded px-4 font-medium py-3  bg-slate-100 w-full" />
                                         {errors.password && <span className="text-red-600">Password is required</span>}
                                         <p
                                             onClick={() => setShowPass(!showPass)}
@@ -120,23 +120,19 @@ const SignUp = () => {
                                     </div>
                                 </label>
                             </div>
-                            <div className="mt-6">
-                                <ReCAPTCHA
-                                    sitekey="6LdSZyQqAAAAALVgjyeu1W798y50VddwwgO5puit"
-                                    onChange={(val) => setCaptchaValue(val)}
-                                />
+                            <div>
+                                <input
+                                    type="submit"
+                                    value={'Create Account'}
+                                    // disabled={!captchaValue}
+                                    className="w-full py-3 mt-3 bg-[#fa966b] cursor-pointer text-white rounded-md" />
                             </div>
-                            <input
-                                type="submit"
-                                value={'Create Account'}
-                                disabled={!captchaValue}
-                                className="w-full py-3 mt-6 bg-[#fa966b] cursor-pointer text-white rounded-md" />
                         </div>
                     </form>
-                    <div className="w-full lg:px-16 px-10 space-y-3">
+                    <div className="w-full space-y-3 ">
                         <button
-                            onClick={googleLogin}
-                            className="border-2   rounded-md hover:rounded-full border-[#fa966b] py-3 w-full  flex justify-center items-center "><FcGoogle size={25} />
+                            onClick={googleLoginUser}
+                            className="border-2   rounded-md hover:rounded-full border-[#fa966b] py-3 w-full duration-500 ease-in  flex justify-center items-center "><FcGoogle size={25} />
                         </button>
                         <p className="text-[#6C6B6B]">Already registered? Go to <Link to={'/login'}><span className="text-[#fa966b]">SIGN IN</span></Link></p>
                     </div>

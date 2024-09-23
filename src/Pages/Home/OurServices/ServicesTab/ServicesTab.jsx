@@ -3,6 +3,8 @@ import 'react-tabs/style/react-tabs.css';
 import useServices from '../../../../Hooks/Services/useServices';
 import ServicesCart from '../../../../Components/SevrviceCart/ServicesCart';
 
+import './tabsStyles.css';
+
 
 const ServicesTab = () => {
 

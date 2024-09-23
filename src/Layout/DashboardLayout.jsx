@@ -16,12 +16,14 @@ const DashboardLayout = () => {
             </Helmet>
             <div className='relative min-h-full md:flex'>
                 {/* Sidebar Component */}
-                <Sidebar sideBarIsOpen={sideBarIsOpen} setSideBarIsOpen={setSideBarIsOpen} />
-                <div className='flex-1'>
-                    <div className="">
-                        <Navbar sideBarIsOpen={sideBarIsOpen} setSideBarIsOpen={setSideBarIsOpen} />
+                <div className="">
+                    <Navbar sideBarIsOpen={sideBarIsOpen} setSideBarIsOpen={setSideBarIsOpen} />
+                </div>
+                <div className='flex-1 lg:mt-16 top-28'>
+                    <div>
+                        <Sidebar sideBarIsOpen={sideBarIsOpen} setSideBarIsOpen={setSideBarIsOpen} />
                     </div>
-                    <div className={`p-5  ${sideBarIsOpen ? 'ml-64 duration-700' : 'duration-700'}`}>
+                    <div className={`p-5  ${sideBarIsOpen ? 'lg:ml-64 duration-700' : 'duration-700'}`}>
                         {/* Outlet for dynamic contents */}
                         <Outlet />
                     </div>

@@ -68,7 +68,7 @@ const MyAppointment = () => {
         <>
             {
                 appointment?.length === 0 ? <NotAppointment /> :
-                    <div className="lg:px-8 mt-16">
+                    <div className="lg:px-8">
                         <div className="flex justify-between items-center">
                             <h1 className="text-2xl text-gray-800 font-kanit">My Appointment: {appointment?.length}</h1>
                             <button className="border border-[#003D8D] rounded-md hover:bg-[#003D8D] hover:text-white px-6 py-2">May, 10, 2022</button>

@@ -1,0 +1,14 @@
+.react-tabs__tab{
+    background-color: white;
+    margin-left: 10px;
+}
+.react-tabs__tab--selected{
+    background-color: #ff9d73;
+    border-radius: 5px;
+    color: white;
+}
+.react-tabs__tab:hover{
+    background-color: #ff9d73;
+    color: white;
+    border-radius: 5px;
+}

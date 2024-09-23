@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
-import { CiCircleRemove } from "react-icons/ci";
 import { FaUserGear } from "react-icons/fa6";
 import { Tooltip } from "@chakra-ui/react";
 import toast from "react-hot-toast";
@@ -61,7 +60,7 @@ const AllUser = () => {
 
     return (
         <div className="">
-            <h1 className="text-2xl font-kanit font-normal py-2 mt-16">Users: {users?.length}</h1>
+            <h1 className="text-2xl font-kanit font-normal py-2">Users: {users?.length}</h1>
 
             <div className="overflow-x-auto bg-white">
                 <table className="table">

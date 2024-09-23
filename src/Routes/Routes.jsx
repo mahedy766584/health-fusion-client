@@ -13,11 +13,11 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import AddADoctor from "../Pages/Dashboard/AdminSide/AddADoctor";
 import ManageDoctor from "../Pages/Dashboard/AdminSide/ManageDoctor";
 import MyAppointment from "../Pages/Dashboard/MyAppointment/MyAppointment";
-import MyReviews from "../Pages/Dashboard/UserSide/MyReviews";
 import MyHistory from "../Pages/Dashboard/UserSide/MyHistory";
 import HomeDashboard from "../Pages/Dashboard/Home";
 import Payment from "../Pages/Dashboard/MyAppointment/Payment";
 import AdminRoute from "../Components/Private/AdminRoute";
+import ProfilePage from "../Pages/Dashboard/ProfilePage";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -92,16 +92,16 @@ const myCreatedRouter = createBrowserRouter([
                 element: <MyAppointment />
             },
             {
-                path: "myReviews",
-                element: <MyReviews />
-            },
-            {
                 path: "myHistory",
                 element: <MyHistory />
             },
             {
                 path: "payment",
                 element: <Payment />
+            },
+            {
+                path: "profilePage",
+                element: <ProfilePage/>
             }
         ]
     },

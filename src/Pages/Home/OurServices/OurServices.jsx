@@ -9,7 +9,7 @@ const OurServices = () => {
         <Container>
             <div className="lg:flex items-center justify-center gap-8  lg:h-[1030px]">
                 <div className="flex-1">
-                    <img className="w-[658px] lg:h-[1020px] rounded-md" src={doctorImg} />
+                    <img className="w-[658px] lg:h-[1020px] object-cover rounded-md" src={doctorImg} />
                 </div>
                 <div className="flex-1 lg:text-start text-center">
                     <SectionTitle heading={'Our Services'} />

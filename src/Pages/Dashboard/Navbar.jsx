@@ -2,20 +2,30 @@
 import { FaBars, FaBell, FaSearch, FaUserCircle } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/Logo/logo3.png"
 
 const Navbar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
 
 
     return (
-        <div className={`bg-[#003D8D] px-4 py-3 w-full fixed z-20`}>
+        <div className={`bg-[#003D8D] px-4 py-3 w-full fixed z-30`}>
 
-            <div  className={`flex justify-between items-center  ${sideBarIsOpen ? 'ml-64 duration-700' : 'duration-700'}`}>
-                <div className="  bg-[#003D8D] text-white p-2 rounded-full">
-                    <span onClick={() => setSideBarIsOpen(!sideBarIsOpen)}>
-                        {
-                            sideBarIsOpen ? <FaBars className="w-8 h-8 cursor-pointer" /> : <AiOutlineClose  className="w-8 h-8 cursor-pointer" />
-                        }
-                    </span>
+            <div className={`flex justify-between items-center`}>
+                <div className="flex items-center gap-2">
+                    <div className="  bg-[#003D8D] text-white p-1 rounded-full">
+                        <span onClick={() => setSideBarIsOpen(!sideBarIsOpen)}>
+                            {
+                                sideBarIsOpen ? <FaBars className="w-8 h-8 cursor-pointer" /> : <AiOutlineClose className="w-8 h-8 cursor-pointer" />
+                            }
+                        </span>
+                    </div>
+                    {/* logo design */}
+                    <div className="flex items-center gap-1 ">
+                        <img src={logo} alt="HealthFusion" className="lg:w-9 w-9" />
+                        <h1
+                            style={{ textShadow: ' 3px 3px 10px black' }}
+                            className={` lg:text-2xl text-xl font-medium font-kanit text-white`}><span className="text-red-400">Health</span >Fusion</h1>
+                    </div>
                 </div>
                 <div className="flex  items-center gap-x-5">
                     <div className="relative md:w-65 hidden lg:flex">
