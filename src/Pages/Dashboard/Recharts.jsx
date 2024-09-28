@@ -1,5 +1,5 @@
 
-import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
+import { ResponsiveContainer, BarChart, Bar,  YAxis, Tooltip, XAxis } from "recharts";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 
@@ -25,8 +25,8 @@ const Recharts = () => {
         { name: 'appointments', value: totalData.appointments }
     ];
 
-
     
+
     return (
         <div className="mt-16">
             <ResponsiveContainer width={'100%'} aspect={4}>

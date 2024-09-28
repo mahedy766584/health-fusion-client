@@ -6,15 +6,16 @@ import { TiDeleteOutline } from "react-icons/ti";
 import { Tooltip } from "@chakra-ui/react";
 import Swal from "sweetalert2";
 import LoadingAnimation from "../../../Components/LoadingAnimation/LoadingAnimation";
-import useAxiosPublic from "../../../Hooks/useAxiosPublic";
-import { MdPayments } from "react-icons/md";
-import { Link } from "react-router-dom";
+// import useAxiosPublic from "../../../Hooks/useAxiosPublic";
+// import { MdPayments } from "react-icons/md";
+// import { Link } from "react-router-dom";
+import PayModal from "./PayModal";
 
 
 const MyAppointment = () => {
 
     const axiosSecure = UseAxiosSecure();
-    const axiosPublic = useAxiosPublic();
+    // const axiosPublic = useAxiosPublic();
     const { user } = useAuth();
 
     const { data: appointment = [], refetch, isLoading } = useQuery({
@@ -100,18 +101,19 @@ const MyAppointment = () => {
                                             <td>{item?.isTimes}</td>
                                             <td>${item?.price}</td>
                                             <th>
-                                                {/* <PayModal
+                                                <PayModal
                                                     id={item?._id}
                                                     serviceName={item?.serviceName}
                                                     time={item?.isTimes}
                                                     price={item?.price}
-                                                /> */}
-                                                <Link to={'/dashboard/payment'}>
+                                                    servicesId={item?.servicesId}
+                                                />
+                                                {/* <Link to={'/dashboard/payment'}>
                                                     <button
                                                         className="btn btn-circle btn-primary">
                                                         pay
                                                     </button>
-                                                </Link>
+                                                </Link> */}
                                                 {/* <Tooltip hasArrow label='Pay Now' placement='left' bg='#003D8D'>
                                                     <button
                                                         className="p-3 text-lg bg-[#003D8D] text-white rounded-full">

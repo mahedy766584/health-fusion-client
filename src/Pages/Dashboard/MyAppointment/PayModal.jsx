@@ -5,20 +5,14 @@ import useAuth from "../../../Hooks/useAuth";
 import CheckoutForm from "./CheckoutForm";
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from "@stripe/react-stripe-js"
-// import { useState } from "react";
 
 
 //add add publishable kay
-const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_PK)
+const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_PK);
 
-const PayModal = ({ id, time, price }) => {
-
-    // eslint-disable-next-line no-unused-vars
-    // const [isStripe, setIsStripe] = useState(stripePromise);
+const PayModal = ({ price, id, serviceName, time, servicesId }) => {
 
     const { user } = useAuth();
-
-    // const itemsIs = import.meta.env.VITE_PAYMENT_GATEWAY_PK
 
 
     return (
@@ -39,12 +33,12 @@ const PayModal = ({ id, time, price }) => {
                         </form>
                         <h3 className="font-medium text-red-400 text-md">Hello, {user?.displayName}</h3>
                         <div className="mt-6 space-y-3">
-                            <h1 className="text-xl font-medium text-gray-800">Please Pay for Tech Cleaning</h1>
-                            <p className="text-[#646464] font-normal">Your Appointment:  <span className="ml-2">{time}</span></p>
-                            <h1 className="text-xl font-medium text-gray-800">Please Pay Price: ${price}</h1>
+                            <h1 className="text-xl px-3 font-medium text-gray-800">Please Pay for Tech Cleaning</h1>
+                            <p className="text-[#646464] px-3 font-normal">Your Appointment:  <span className="ml-2">{time}</span></p>
+                            <h1 className="text-xl px-3 font-medium text-gray-800">Please Pay Price: ${price}</h1>
                             <div>
                                 <Elements stripe={stripePromise}>
-                                    <CheckoutForm />
+                                    <CheckoutForm price={price} id={id} serviceName={serviceName} servicesId={servicesId}/>
                                 </Elements>
                             </div>
                         </div>

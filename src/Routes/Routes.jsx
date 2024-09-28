@@ -62,10 +62,9 @@ const myCreatedRouter = createBrowserRouter([
             // admin routes
 
             {
+                // path: "/dashboard",
                 index: true,
-                element: <PrivateRoute>
-                    <HomeDashboard />
-                </PrivateRoute>
+                element: <HomeDashboard />
             },
             {
                 path: "allUser",
@@ -101,7 +100,7 @@ const myCreatedRouter = createBrowserRouter([
             },
             {
                 path: "profilePage",
-                element: <ProfilePage/>
+                element: <ProfilePage />
             }
         ]
     },

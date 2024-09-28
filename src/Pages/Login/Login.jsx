@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import medicine from "../../assets/medicineImg/medicine1.png"
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaGoogle } from "react-icons/fa";
 import useAuth from "../../Hooks/useAuth";
 import { useForm } from "react-hook-form";
 import { useState } from "react";

@@ -2,13 +2,16 @@ import { NavLink } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { AiOutlineDashboard } from "react-icons/ai";
+import useAdmin from "../Hooks/useAdmin";
 
 const NavItems = () => {
 
     const { logOut, user } = useAuth();
 
+    const [isAdmin] = useAdmin();
+
     return (
-        <ul className=" font-kanit text-lg flex items-center text-[#ff9161] relative  font-light menu-horizontal px-1 space-x-10">
+        <ul className=" font-kanit text-base flex items-center text-[#ff9161] relative  font-light menu-horizontal px-1 space-x-10">
             <li>
                 <NavLink
                     to="/"
@@ -49,11 +52,20 @@ const NavItems = () => {
                                     {user?.displayName}
                                 </p>
                             </MenuItem>
-                            <MenuItem>
-                                <a className=" flex items-center gap-2 text-white hover:bg-[#ff9b70] bg-[#F7A582] px-6 w-full py-2 rounded-md" href="/dashboard">
-                                    <AiOutlineDashboard size={25}/> Go to Dashboard
-                                </a>
-                            </MenuItem>
+                            {
+                                isAdmin ?
+                                    <MenuItem>
+                                        <NavLink className=" flex items-center gap-2 text-white hover:bg-[#ff9b70] bg-[#F7A582] px-6 w-full py-2 rounded-md" to="/dashboard">
+                                            <AiOutlineDashboard size={20} /> Go to Dashboard 
+                                        </NavLink>
+                                    </MenuItem>
+                                    :
+                                    <MenuItem>
+                                        <NavLink className=" flex items-center gap-2 text-white hover:bg-[#ff9b70] bg-[#F7A582] px-6 w-full py-2 rounded-md" to="/dashboard/myAppointment">
+                                            <AiOutlineDashboard size={20} /> Go to Dashboard 
+                                        </NavLink>
+                                    </MenuItem>
+                            }
                             <MenuItem>
                                 <button onClick={logOut} className="text-white hover:bg-[#ff9b70] bg-[#F7A582] px-6 w-full py-2 rounded-md">Logout</button>
                             </MenuItem>

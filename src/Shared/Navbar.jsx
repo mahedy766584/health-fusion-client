@@ -6,10 +6,13 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { NavLink } from "react-router-dom";
 import { AiOutlineDashboard } from "react-icons/ai";
 import useAuth from "../Hooks/useAuth";
+import useAdmin from "../Hooks/useAdmin";
 
 const Navbar = () => {
 
-    const {user, logOut} = useAuth();
+    const { user, logOut } = useAuth();
+
+    const [isAdmin] = useAdmin();
 
     return (
         <div className="navbar fixed z-10 top-0 bg-[#003D8D] bg-opacity-90">
@@ -58,7 +61,7 @@ const Navbar = () => {
                             </MenuItem>
                             <MenuItem>
                                 <NavLink
-                                    to="/dashboard"
+                                    to={`/dashboard`}
                                     className={({ isActive, isPending }) =>
                                         isPending ? "pending" : isActive ? "text-white block hover:bg-[#ff9b70] bg-[#F7A582] px-6 py-2 rounded-md" : "flex items-center gap-2"
                                     }
