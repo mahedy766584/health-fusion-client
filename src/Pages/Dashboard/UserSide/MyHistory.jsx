@@ -18,7 +18,7 @@ const MyHistory = () => {
     console.log(payments);
 
     return (
-        <div className="">
+        <div className="lg:mt-0 mt-16">
             <div className="overflow-x-auto  font-kanit mt-6">
                 <table className="table">
                     {/* head */}

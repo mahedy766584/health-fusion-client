@@ -24,7 +24,7 @@ const Home = () => {
     return (
         <>
             <div>
-                <div className="">
+                <div className="lg:mt-0 mt-12">
                     <h1 className="py-4 text-2xl font-medium">Hi, {user.displayName}</h1>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                         <div className="bg-slate-200 p-6 rounded-md space-y-5 shadow-xl relative">

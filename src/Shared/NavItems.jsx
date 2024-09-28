@@ -11,12 +11,12 @@ const NavItems = () => {
     const [isAdmin] = useAdmin();
 
     return (
-        <ul className=" font-kanit text-base flex items-center text-[#ff9161] relative  font-light menu-horizontal px-1 space-x-10">
+        <ul className=" font-kanit text-lg  flex items-center text-[#ff9161] relative  font-light menu-horizontal px-1 space-x-10">
             <li>
                 <NavLink
                     to="/"
                     className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "text-white hover:bg-[#ff9b70] bg-[#F7A582] px-6 py-2 rounded-md" : ""
+                        isPending ? "pending" : isActive ? "text-white hover:bg-[#ff9b70] bg-[#F7A582] px-6 py-2 rounded-md" : " "
                     }
                 >
                     Home

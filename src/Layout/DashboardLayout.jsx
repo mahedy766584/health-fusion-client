@@ -19,7 +19,7 @@ const DashboardLayout = () => {
                 <div className="">
                     <Navbar sideBarIsOpen={sideBarIsOpen} setSideBarIsOpen={setSideBarIsOpen} />
                 </div>
-                <div className='flex-1 lg:mt-16 top-28'>
+                <div className='flex-1 lg:mt-16'>
                     <div>
                         <Sidebar sideBarIsOpen={sideBarIsOpen} setSideBarIsOpen={setSideBarIsOpen} />
                     </div>

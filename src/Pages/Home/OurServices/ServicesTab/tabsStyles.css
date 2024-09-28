@@ -12,3 +12,9 @@
     color: white;
     border-radius: 5px;
 }
+.react-tabs__tab{
+    border: 1px solid #ff9d73;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-top: 10px;
+}

@@ -5,17 +5,13 @@ import NotAppointment from "../../../Components/NotAppointment/NotAppointment";
 import { TiDeleteOutline } from "react-icons/ti";
 import { Tooltip } from "@chakra-ui/react";
 import Swal from "sweetalert2";
-import LoadingAnimation from "../../../Components/LoadingAnimation/LoadingAnimation";
-// import useAxiosPublic from "../../../Hooks/useAxiosPublic";
-// import { MdPayments } from "react-icons/md";
-// import { Link } from "react-router-dom";
 import PayModal from "./PayModal";
+import DashboardLoadingAnimation from "../../../Components/DashboardLoadingAnimation/DashboardLoadingAnimation";
 
 
 const MyAppointment = () => {
 
     const axiosSecure = UseAxiosSecure();
-    // const axiosPublic = useAxiosPublic();
     const { user } = useAuth();
 
     const { data: appointment = [], refetch, isLoading } = useQuery({
@@ -36,7 +32,7 @@ const MyAppointment = () => {
     // console.log(appointment.isNames);
 
     if (isLoading) {
-        return <LoadingAnimation />
+        return <DashboardLoadingAnimation/>
     }
 
     const handleDeleteAppointment = (item) => {
@@ -69,7 +65,7 @@ const MyAppointment = () => {
         <>
             {
                 appointment?.length === 0 ? <NotAppointment /> :
-                    <div className="lg:px-8">
+                    <div className="lg:px-8 mt-16 lg:mt-0">
                         <div className="flex justify-between items-center">
                             <h1 className="text-2xl text-gray-800 font-kanit">My Appointment: {appointment?.length}</h1>
                             <button className="border border-[#003D8D] rounded-md hover:bg-[#003D8D] hover:text-white px-6 py-2">May, 10, 2022</button>

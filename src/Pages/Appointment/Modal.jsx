@@ -10,9 +10,9 @@ const Modal = ({ services, date, id }) => {
     const { user } = useAuth()
     const axiosPublic = useAxiosPublic();
 
-    const { register, handleSubmit, reset } = useForm()
+    const { register, handleSubmit, reset } = useForm();
 
-    console.log(services.price);
+    // console.log(services.price);
 
     const onSubmit = async (data) => {
         // console.log(data);
@@ -35,13 +35,11 @@ const Modal = ({ services, date, id }) => {
 
         console.log(appointmentItem);
 
-    }
+    };
 
     // console.log(services);
 
     return (
-
-
         <div>
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
             <button

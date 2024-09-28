@@ -40,7 +40,7 @@ const ManageDoctor = () => {
     }
 
     return (
-        <div className="px-8">
+        <div className="lg:px-8 lg:mt-0 mt-12">
             <SectionTitle heading={`Doctors: ${doctors?.length}`} />
 
             <div className="overflow-x-auto">

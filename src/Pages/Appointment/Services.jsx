@@ -3,14 +3,13 @@ import { format } from "date-fns";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import useServices from "../../Hooks/Services/useServices";
 import Modal from "./Modal";
-// import Modal from "./Modal";
 
 
 const Services = ({ date }) => {
 
     const [services] = useServices();
 
-    console.log(services);
+    // console.log(services);
 
     return (
         <div>

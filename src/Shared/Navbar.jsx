@@ -1,4 +1,3 @@
-import Container from "../Components/Container/Container";
 import NavItems from "./NavItems";
 import logo from "../assets/Logo/logo3.png"
 import { FaBars } from "react-icons/fa6";
@@ -15,19 +14,22 @@ const Navbar = () => {
     const [isAdmin] = useAdmin();
 
     return (
-        <div className="navbar fixed z-10 top-0 bg-[#003D8D] bg-opacity-90">
-            <Container />
-            <div className="navbar-start space-x-48">
+        <div className="fixed top-0 z-10 bg-[#003D8D] bg-opacity-90 w-full flex items-center justify-between lg:px-48 py-4 px-2">
                 {/* logo design */}
-                <div className="flex items-center gap-1 -ml-8">
+                <div className="flex items-center gap-1">
                     <img src={logo} alt="HealthFusion" className="lg:w-16 w-12" />
                     <h1
                         style={{ textShadow: ' 3px 3px 10px black' }}
                         className="lg:text-4xl text-2xl font-medium font-kanit text-white"><span className="text-red-400">Health</span >Fusion</h1>
                 </div>
+                <div className="hidden lg:flex">
+                    <div className="hidden lg:flex">
+                        <NavItems />
+                    </div>
+                </div>
                 <div className="lg:hidden">
                     <Menu>
-                        <MenuButton><FaBars size={25} color="white" /></MenuButton>
+                        <MenuButton><FaBars size={35} color="white" /></MenuButton>
                         <MenuItems anchor="bottom" className={'z-20 bg-gray-200 px-4  py-4 rounded shadow-md w-full mt-5 text-center space-y-2 font-kanit text-lg flex flex-col items-center text-[#ff9161] relative  font-light'}>
                             <MenuItem>
                                 <NavLink
@@ -59,16 +61,29 @@ const Navbar = () => {
                                     Appointment
                                 </NavLink>
                             </MenuItem>
-                            <MenuItem>
-                                <NavLink
-                                    to={`/dashboard`}
-                                    className={({ isActive, isPending }) =>
-                                        isPending ? "pending" : isActive ? "text-white block hover:bg-[#ff9b70] bg-[#F7A582] px-6 py-2 rounded-md" : "flex items-center gap-2"
-                                    }
-                                >
-                                    <AiOutlineDashboard size={25} /> Go to Dashboard
-                                </NavLink>
-                            </MenuItem>
+                            {
+                                isAdmin ? <MenuItem>
+                                    <NavLink
+                                        to={`/dashboard`}
+                                        className={({ isActive, isPending }) =>
+                                            isPending ? "pending" : isActive ? "text-white block hover:bg-[#ff9b70] bg-[#F7A582] px-6 py-2 rounded-md" : "flex items-center gap-2"
+                                        }
+                                    >
+                                        <AiOutlineDashboard size={25} /> Go to Dashboard
+                                    </NavLink>
+                                </MenuItem>
+                                    :
+                                    <MenuItem>
+                                        <NavLink
+                                            to={`/dashboard/myAppointment`}
+                                            className={({ isActive, isPending }) =>
+                                                isPending ? "pending" : isActive ? "text-white block hover:bg-[#ff9b70] bg-[#F7A582] px-6 py-2 rounded-md" : "flex items-center gap-2"
+                                            }
+                                        >
+                                            <AiOutlineDashboard size={25} /> Go to Dashboard
+                                        </NavLink>
+                                    </MenuItem>
+                            }
                             {user ?
                                 <div className="">
                                     <Menu>
@@ -94,13 +109,6 @@ const Navbar = () => {
                         </MenuItems>
                     </Menu>
                 </div>
-            </div>
-            <div className="navbar-end">
-                <div className="navbar-center hidden lg:flex">
-                    <NavItems />
-                </div>
-            </div>
-            <Container />
         </div>
     );
 };

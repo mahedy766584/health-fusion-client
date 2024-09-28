@@ -5,13 +5,14 @@ import { Tooltip } from "@chakra-ui/react";
 import toast from "react-hot-toast";
 import Swal from 'sweetalert2'
 import { RiDeleteBinLine } from "react-icons/ri";
+import DashboardLoadingAnimation from "../../../Components/DashboardLoadingAnimation/DashboardLoadingAnimation"
 
 
 const AllUser = () => {
 
     const axiosSecure = UseAxiosSecure();
 
-    const { data: users = [], refetch } = useQuery({
+    const { data: users = [], refetch, isLoading } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
             const res = await axiosSecure.get('/users')
@@ -19,6 +20,10 @@ const AllUser = () => {
         }
     })
     // console.log(users);
+
+    if(isLoading){
+        return <DashboardLoadingAnimation/>
+    }
 
     const handleMakeAdmin = async (user) => {
         console.log(user);
@@ -59,7 +64,7 @@ const AllUser = () => {
     }
 
     return (
-        <div className="">
+        <div className="lg:mt-0 mt-12">
             <h1 className="text-2xl font-kanit font-normal py-2">Users: {users?.length}</h1>
 
             <div className="overflow-x-auto bg-white">

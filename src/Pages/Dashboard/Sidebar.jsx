@@ -23,7 +23,7 @@ const Sidebar = ({ sideBarIsOpen, setSideBarIsOpen }) => {
     const {logOut} = useAuth();
 
     return (
-        <div className={`${sideBarIsOpen ? 'w-64 duration-700' : '-ml-80  duration-700 '} bg-[#003D8D] fixed h-full px-4  z-20`}>
+        <div className={`${sideBarIsOpen ? 'w-64 duration-700 mt-16 lg:mt-0' : '-ml-80  duration-700 '} bg-[#003D8D] fixed h-full px-4  z-20`}>
             <div className="flex items-start flex-col justify-between h-[90vh]  overflow-y-auto">
                 <ul className=" text-white font-medium ">
                     {

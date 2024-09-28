@@ -6,6 +6,7 @@ import ReactStars from 'react-rating-star-with-type'
 
 const TabsComponent = ({ doctor }) => {
 
+    // eslint-disable-next-line no-unused-vars
     const { profile_image, name, category, occupation, review, location, about, education, work_and_experience, services, awards, specializes } = doctor || {};
 
     // eslint-disable-next-line no-unused-vars
