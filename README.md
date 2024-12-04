@@ -1,27 +1,20 @@
-# LuxeLodge - Hotel Management System 🌐
+# HealthFusion - Healthcare Management System 🌐
 
-LuxeLodge is a state-of-the-art hotel management web application designed for seamless room booking, immersive virtual tours, and efficient operations. This system is built with modern web development tools to deliver an exceptional user experience.
-Currently, two official plugins are available:
+HealthFusion is a comprehensive healthcare management system designed to streamline the process of booking doctor appointments, managing patient data, and offering essential healthcare services online. With a clean and intuitive interface, HealthFusion is a platform for both patients and healthcare professionals to interact seamlessly.
 
-## About LuxeLodge
-LuxeLodge is a fully responsive hotel management platform aimed at providing guests with a convenient and interactive booking experience. The application includes:
-- Room availability checks and reservations.
-- A virtual tour of hotel spaces using 360-degree imagery.
-- Comprehensive information about rooms, pricing, and offers.
-It also supports hotel administrators with tools to manage room listings, offers, and customer details.
+## About HealthFusion
+HealthFusion is a powerful healthcare platform designed to enhance patient care and improve clinic management. It allows patients to easily book appointments with doctors, view healthcare services, and access their medical records. For healthcare providers, it simplifies patient data management and enhances communication between patients and medical professionals.
 
 ## 🌟 Features
-### Guest-Focused Features:
-1. **Interactive Hero Section**
- - Features a high-quality 360-degree virtual tour of the hotel using ReactPannellum.
- - Adds an immersive visual experience for guests.
+### For Patients:
+1. **Appointment Booking**
+ - Patients can view available doctors and book appointments based on their preferred date and time.
 
-2. **Dynamic Room Booking**
-- Real-time availability checks for room booking.
-- Stable check-in and checkout dates to prevent overlap.
+2. **Patient Profile**
+- View and update personal health information, medical history, and appointments.
 
-3. **Paginated Room Listing**
-- Easy navigation for guests to explore available rooms.
+3. **Doctor Search & Filters**
+- Find doctors by specialization, location, availability, and ratings.
 
 4. **Secure Payment Gateway**
 - Integrated with Stripe for safe and hassle-free payment processing.
@@ -35,38 +28,56 @@ It also supports hotel administrators with tools to manage room listings, offers
 7. **Dark Mode**
 - Toggle between light and dark modes for a personalized browsing experience.
 
-## Admin-Focused Features:
-1. **Room Management**
-- Add, update, or delete rooms with detailed attributes like beds, bathrooms, and facilities.
-2. **Offers and Discounts**
-- Manage promotional offers directly from the admin panel.
-3. **Booking Analytics**
-- Track room bookings and generate insights (future enhancement).
+
+## For Healthcare Providers:
+1. **Doctor Dashboard**
+- Manage patient appointments, view medical histories, and update health records.
+2. **Patient Management**
+- View and update patient details, track appointments, and communicate with patients.
+3. **Availability Scheduling**
+- Doctors can manage their available hours and block time for appointments.
+
+
+## Admin Panel:
+1. **User Management**
+- Admins can manage users (patients, doctors) and ensure proper access control.
+2. **System Monitoring**
+- View overall system usage, monitor appointments, and track service usage.
+3. **Data Analytics**
+- Access reports and insights into patient appointments, health trends, and more.
+
 
 ## 🛠 Technologies Used
+| **Category**                               | **Technologies**                                                              |
+|-------------------------------------------|------------------------------------------------------------------------------|
+|**Frontend**                              	|React.js, Chakra UI, React Router, React Icons, Lucide React, React-Slick, React-Helmet-Async, React Tabs|
+|**State Management**	                    |TanStack Query, React Hook Form, Formik                                       |
+|**Backend**                	            |Node.js, Express.js                                                           |
+|**Payment**	                            |Stripe, @stripe/react-stripe-js, @stripe/stripe-js                            |
+|**Authentication**	                        |Firebase Auth, JSON Web Token (JWT), React Google ReCaptcha                   |
+|**UI Components**	                        |Chakra UI, Styled Components, React Icons, SweetAlert2, React Rating Stars Component, React Rating Star With Type |
+|**Charts & Data**	                        |Chart.js, React Chart.js, Recharts                                            |
+|**Forms & Validation**	                    |React Hook Form, Formik                                                       |
+|**Date & Time**	                        |date-fns, react-date-range                                                    |
+|**Notifications**	                        |react-hot-toast, sweetalert2                                                  |
+|**Email**	                                |@emailjs/browser                                                              |
+|**Animations**	                            |framer-motion, lottie-react                                                   |
+|**Carousel & Swipers**	                    |slick-carousel, swiper                                                        |
+|**Utilities**	                            |axios, localforage, match-sorter, sort-by                                     |
 
-| **Category**                                        | **Technologies**                                         |
-|-----------------------------------------------------|----------------------------------------------------------|
-|**Frontend**	                                      |      React.js, Tailwind CSS                              |
-|**Backend**	                                      |      Node.js, Express.js                                 |
-|**Database**	                                      |      MongoDB (NoSQL database)                            |
-|**State Management**	                              |      Context API, TanStack Query                         |
-|**Forms**	                                          |      React Hook Form                                     |
-|**Payment**	                                      |      Stripe Payment API                                  |
-|**Authentication**	                                  |      Firebase Auth                                       |
-|**Localization**	                                  |      google-translate-api-x                              |
-|**Media**	                                          |      ReactPannellum for 360-degree interactive images    |
-|**UI Components**	                                  |      @material-tailwind/react, React Icons               |
-|**Date & Time	date-fns, react-datepicker,**         |       react-date-range                                   |
-|**Google Integration**	                              |      @react-google-maps/api, React-Helmet-Async          |
-|**Toast & Alerts**	                                  |      react-hot-toast, react-toastify, sweetalert2        |
-|**Search & Sorting**                                 |      match-sorter, sort-by                               |
+
+
+
+## Future Enhancements
+- Telemedicine: Integration of video consultations for remote healthcare.
+- Health Records: Implement digital health record tracking for patients.
+- Admin Analytics: Add more detailed reports and data analytics for admins.
 
 
 
 
 ## 🔗 Live Demo
-Check out the live version of my portfolio: [LuxeLodge](https://luxelodge-5b783.web.app/)
+Check out the live version of my portfolio: [HealthFusion](https://healthfusion-4e69b.web.app/)
 
 ## 📬 Contact
 - **Email:** mehediweb2023@gmail.com
