@@ -3,7 +3,7 @@ import useAuth from "../Hooks/useAuth"
 import { useNavigate } from "react-router-dom"
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:9500',
+    baseURL: 'https://healthfusionserver.vercel.app',
 });
 
 const UseAxiosSecure = () => {

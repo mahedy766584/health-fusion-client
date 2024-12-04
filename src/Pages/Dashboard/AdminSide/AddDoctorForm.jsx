@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import ImageUploadingSystem from "./ImageUploadingSystem";
 import { useForm } from "react-hook-form"
 import { useState } from "react";

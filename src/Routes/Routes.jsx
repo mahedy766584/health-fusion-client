@@ -48,7 +48,7 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: "/doctorProfileDetails/:id",
                 element: <PrivateRoute><DoctorProfileDetails /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:9500/doctors/${params.id}`)
+                loader: ({ params }) => fetch(`https://healthfusionserver.vercel.app/doctors/${params.id}`)
             }
         ],
     },

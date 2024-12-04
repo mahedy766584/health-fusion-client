@@ -17,14 +17,7 @@ const MyAppointment = () => {
     const { data: appointment = [], refetch, isLoading } = useQuery({
         queryKey: ["appointments", user?.email],
         queryFn: async () => {
-            const res = await axiosSecure.get(`/appointment?email=${user?.email}`
-                // delete 
-                //     {
-                //     headers: {
-                //         authorization: `Bearer ${localStorage.getItem('access-token')}`
-                //     }
-                // }
-            )
+            const res = await axiosSecure.get(`/appointment?email=${user?.email}`)
             return res.data;
         }
     })
